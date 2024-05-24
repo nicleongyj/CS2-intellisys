@@ -8,5 +8,12 @@ class Video(models.Model):
 
     def _str_(self):
         return self.video.name
+    
+# Model for garbage chute
+class ChuteVideo(models.Model):
+    video = models.FileField()
+
+    def _str_(self):
+        return self.video.name
 
 
