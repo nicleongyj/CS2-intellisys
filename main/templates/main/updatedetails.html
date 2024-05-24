@@ -1,0 +1,40 @@
+{% extends 'main/home.html' %}
+
+{% block title %} Centre of Smart Systems {% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+<body>
+    <center>
+	<h2>Detection Details</h2>
+	<div class="details">
+        	<h1></h1>
+	</div>
+	<div class="details">
+        	<h1></h1>
+	</div>
+	</center>
+</body>
+{% endblock %}
+
+<script>
+$(document).ready(function(){
+    
+    setInterval(function()
+    {
+	  $.ajax({
+	      url: "{% url 'update_details' %}",
+	      type: 'GET',
+	      success: function(response){
+		const data = response
+		$(".details").eq(0).find("h1").text(response["detection"])
+	      },
+	      error: function(response){
+		alert("NO Data")
+	      }
+	    })
+    }, 10000)
+    
+});
+</script>
+

@@ -1,0 +1,21 @@
+{% extends 'main/home.html' %}
+
+{% block title %} Centre of Smart Systems {% endblock %}
+
+{% block content %}
+	<center><h1 >Centre for Smart Systems</h1></center>
+
+        <br><br>
+
+        <center>
+        <div>
+            <video class="embed-responsive embed-responsive-16by9" controls="controls" width="640px" height="480">
+                <source src= "{{MEDIA_URL}}chute/evidence/garbage_chute_example.mp4" type="video/mp4">
+            </video><br>
+            <video class="embed-responsive embed-responsive-16by9" controls="controls" width="640px" height="480">
+                <source src= "{{MEDIA_URL}}chute/evidence/result2.mp4" type="video/mp4">
+            </video><br>
+        </div>
+        </center>
+
+{% endblock %}

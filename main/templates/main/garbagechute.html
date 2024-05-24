@@ -1,0 +1,17 @@
+{% extends 'main/home.html' %}
+
+{% block title %} Centre of Smart Systems {% endblock %}
+
+{% block content %}
+<center><h1 >Centre for Smart Systems</h1></center>
+
+<br><br>
+<center>
+	<div class="d-grid gap-2 d-md-block">
+		<a href="{% url 'sample' %}"><button type="button" class="btn btn-primary btn-lg">Sample</button></a>
+		<a href="{% url 'evidence' %}"><button type="button" class="btn btn-primary btn-lg">Evidence</button></a>
+	</div> 
+</center>
+
+{% endblock %}
+
